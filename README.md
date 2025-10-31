@@ -1,7 +1,17 @@
 # Todo App
+
+![Node.js](https://img.shields.io/badge/Node.js-18.x-green)
+![Express](https://img.shields.io/badge/Express.js-black)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue)
+![Status](https://img.shields.io/badge/status-active-success)
+
 <img width="1919" height="936" alt="image" src="https://github.com/user-attachments/assets/66f26911-fec6-4095-84b2-bdb81bb0680c" />
 
 A minimal full-stack Todo application with a modern UI, theme toggle, and a simple Express backend storing todos in memory.
+
+| Light | Dark |
+|-------|------|
+| <img width="1919" height="932" alt="Light Theme" src="https://github.com/user-attachments/assets/75d32e75-9591-42eb-a375-ed71af14bf21" /> | <img width="1919" height="936" alt="Dark Theme" src="https://github.com/user-attachments/assets/66f26911-fec6-4095-84b2-bdb81bb0680c" /> |
 
 ## Features
 - Add new todos
@@ -79,6 +89,7 @@ Note: Data is stored in-memory and resets when the server restarts.
 
 ## License
 MIT
+
 
 
 
