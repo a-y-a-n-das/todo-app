@@ -1,4 +1,5 @@
 # Todo App
+<img width="1919" height="936" alt="image" src="https://github.com/user-attachments/assets/66f26911-fec6-4095-84b2-bdb81bb0680c" />
 
 A minimal full-stack Todo application with a modern UI, theme toggle, and a simple Express backend storing todos in memory.
 
@@ -78,5 +79,6 @@ Note: Data is stored in-memory and resets when the server restarts.
 
 ## License
 MIT
+
 
 
