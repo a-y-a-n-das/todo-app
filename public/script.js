@@ -1,6 +1,7 @@
 console.log("script is working...");
 const list = document.getElementById("todoList");
 const addBtn = document.getElementById("addBtn");
+const themeToggle = document.getElementById("themeToggle");
 
 function updateList(data) {
   list.innerHTML = "";
@@ -13,12 +14,14 @@ function updateList(data) {
   console.log(data);
   data.forEach((e) => {
     const li = document.createElement("li");
-    li.textContent = e.text;
+    const textEl = document.createElement("span");
+    textEl.className = "text";
+    textEl.textContent = e.text;
+    li.appendChild(textEl);
 
-    // make it look completed if already done
+    // make it look completed if already done (via class, not inline styles)
     if (e.completed) {
-      li.style.textDecoration = "line-through";
-      li.style.color = "gray";
+      li.classList.add("completed");
     }
     // create a button for toggling
     const btn = document.createElement("button");
@@ -65,3 +68,19 @@ addBtn.addEventListener("click", () => {
     .then(() => updateList());
   input.value = "";
 });
+
+// Theme toggle: simple light/dark switch using data-theme on <html>
+if (themeToggle) {
+  const root = document.documentElement;
+  const preferLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+  // Initial icon and theme from system preference
+  root.setAttribute('data-theme', preferLight ? 'light' : 'dark');
+  themeToggle.textContent = preferLight ? '🌙' : '☀️';
+
+  themeToggle.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme') || (preferLight ? 'light' : 'dark');
+    const next = current === 'light' ? 'dark' : 'light';
+    root.setAttribute('data-theme', next);
+    themeToggle.textContent = next === 'light' ? '🌙' : '☀️';
+  });
+}
