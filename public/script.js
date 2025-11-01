@@ -6,7 +6,7 @@ const themeToggle = document.getElementById("themeToggle");
 function updateList(data) {
   list.innerHTML = "";
   if (!data) {
-    fetch("http://localhost:3000/api/todos")
+    fetch("/api/todos")
       .then((response) => response.json())
       .then((data) => updateList(data));
     return;
@@ -34,7 +34,7 @@ function updateList(data) {
     btnDelete.style.marginLeft = "10px";
 
     btn.addEventListener("click", () => {
-      fetch("http://localhost:3000/api/todos", {
+      fetch("/api/todos", {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ idToComplete: e.id })
@@ -42,7 +42,7 @@ function updateList(data) {
     });
 
     btnDelete.addEventListener('click', ()=> {
-        fetch("http://localhost:3000/api/todos", {
+        fetch("/api/todos", {
             method: "DELETE",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({idToDelete: e.id})
@@ -59,7 +59,7 @@ updateList();
 
 addBtn.addEventListener("click", () => {
   const input = document.getElementById("todoInput");
-  fetch("http://localhost:3000/api/todos", {
+  fetch("/api/todos", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ text: input.value }),
@@ -84,3 +84,4 @@ if (themeToggle) {
     themeToggle.textContent = next === 'light' ? '🌙' : '☀️';
   });
 }
+
