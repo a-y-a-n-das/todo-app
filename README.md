@@ -9,6 +9,8 @@
 
 A minimal full-stack Todo application with a modern UI, theme toggle, and a simple Express backend storing todos in memory.
 
+🌐 **Live Demo:** [https://todo-app-f9m4.onrender.com/](https://todo-app-f9m4.onrender.com/)
+
 | Light | Dark |
 |-------|------|
 | <img width="1919" height="932" alt="Light Theme" src="https://github.com/user-attachments/assets/75d32e75-9591-42eb-a375-ed71af14bf21" /> | <img width="1919" height="936" alt="Dark Theme" src="https://github.com/user-attachments/assets/66f26911-fec6-4095-84b2-bdb81bb0680c" /> |
@@ -89,6 +91,7 @@ Note: Data is stored in-memory and resets when the server restarts.
 
 ## License
 MIT
+
 
 
 
