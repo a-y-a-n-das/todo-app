@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const todoRoutes = require('./routes/todoRoutes');
+const todoRoutes = require('./routes/todoroutes');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
@@ -13,3 +13,4 @@ app.get('/', (req, res) => {
 });
 
 app.listen(3000, () => console.log('Server started on port 3000'));
+
