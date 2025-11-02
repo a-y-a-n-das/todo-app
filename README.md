@@ -82,15 +82,9 @@ Note: Data is stored in-memory and resets when the server restarts.
 └─ server.js                # Express app entry
 ```
 
-## Troubleshooting
-- If requests fail due to JSON parsing, replace body-parser with native Express JSON:
-  ```js
-  app.use(express.json())
-  ```
-- On case-sensitive systems, ensure import paths match file names exactly. For example, `todoRoutes` vs `todoroutes.js`, `todoControllers` vs `todocontrollers.js`.
-
 ## License
 MIT
+
 
 
 
